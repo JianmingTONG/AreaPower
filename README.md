@@ -99,3 +99,11 @@ cd <...>/Area_Power/
 ```
 python3 ./scripts/python_wrapper/run_dc.py
 ```
+
+# Result Illumination
+![area fitting of adder tree to the number of input ports](./fitting_result/area_adder_tree.png)
+![area fitting of Synchronous FIFO to the number of input ports](./fitting_result/area_fifo.png)
+![area fitting of crossbar to the number of input ports](./fitting_result/area_crossbar.png)
+![power fitting of adder tree to the number of input ports](./fitting_result/power_adder_tree.png)
+![power fitting of fifo to the number of input ports](./fitting_result/power_fifo.png)
+![power fitting of crossbar to the number of input ports](./fitting_result/power_crossbar.png)
