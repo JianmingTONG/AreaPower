@@ -1,0 +1,20 @@
+----------------------------------
+ASIC flow for Nangate 15nm
+----------------------------------
+
+1. Running synthesis
+	a) Add your files to /src
+	b) Update the file_list.tcl to indicate your files and verilog parameters
+	c) update variables.tcl
+	d) 'make synth'
+
+2. Running PnR
+	a) check that synthesis completed without error
+	b) confirm that variables.tcl is updated
+	c) 'make pnr'
+
+3. sweep parameters in synthesis
+	a) check that synthesis completed without error
+	b) confirm that variables.tcl is updated
+	c) 'make pnr'
+
