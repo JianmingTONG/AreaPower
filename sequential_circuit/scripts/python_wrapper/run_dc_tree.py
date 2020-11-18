@@ -20,18 +20,18 @@ def alter(file,old_str,new_str):
 
 # ADDER TREE 
 # specify the top module name
-top_module = ["adder_tree"]
+top_module = ["tree"]
 
 # a) change variable.tcl
 alter("./variables.tcl", "set project ", 'set project "' + top_module[0] + '"\n')
 
 # b) change file_list.tcl;
 # add all verilog files in { }.
-alter("./file_list.tcl", "analyze", "analyze -format sverilog {../src/adder_tree.v}\n")
+alter("./file_list.tcl", "analyze", "analyze -format sverilog {../src/tree.v}\n")
 
 # c) set all sweeped parameter. 
 # only modify parameters in need of change without list all parameters 
-parameter_value = [[4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]]
+parameter_value = [[4]]#, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]]
 # parameter_value = [[4]]
 parameter_name = ["NUM"]
 
