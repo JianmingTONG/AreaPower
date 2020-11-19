@@ -8,5 +8,5 @@
 
 
 # For systemverilog files (pass parameters)
-analyze -format sverilog {../src/tree.v}
-elaborate -parameter "NUM= 4" tree
+analyze -format sverilog {../src/crossbar/c_select_1ofn.v ../src/crossbar/c_interleave.v ../src/crossbar/c_crossbar.v }
+elaborate -parameter "num_in_ports=4 ,num_out_ports=4 " c_crossbar
