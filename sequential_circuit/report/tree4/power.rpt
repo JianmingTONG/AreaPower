@@ -1,0 +1,41 @@
+Loading db file '/home/jianming/work/FileTransfer/AreaPower/sequential_circuit/lib/NanGate_15nm_OCL.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : tree_NUM4
+Version: L-2016.03-SP1
+Date   : Thu Nov 19 13:29:27 2020
+****************************************
+
+
+Library(s) Used:
+
+    NanGate_15nm_OCL (File: /home/jianming/work/FileTransfer/AreaPower/sequential_circuit/lib/NanGate_15nm_OCL.db)
+
+
+Operating Conditions: typical   Library: NanGate_15nm_OCL
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 0.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ps
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+tree_NUM4                              1.88e-02 5.91e-03 9.80e+05 2.57e-02 100.0
+  genblk5_0__level1 (selecter_LEN16_0) 1.47e-02 2.14e-03 3.46e+05 1.72e-02  67.0
+  genblk3_1__level0 (selecter_LEN16_1) 2.04e-03 1.89e-03 3.17e+05 4.25e-03  16.5
+  genblk3_0__level0 (selecter_LEN16_2) 2.06e-03 1.88e-03 3.17e+05 4.26e-03  16.5
+1

@@ -30,7 +30,7 @@ set Clock_Name "clk"
 
 
 # 4. Set project name
-set project "c_crossbar"
+set project "tree"
     # Option 1 - regular compile - "regular"
 	# Option 2 - ultra compile - "ultra"
 	# Option 3 - ultra compile no autoungroup - "ultra_no_ungroup"

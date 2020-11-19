@@ -1,0 +1,287 @@
+Initializing gui preferences from file  /home/jianming/.synopsys_dv_prefs.tcl
+#START
+source ../variables.tcl
+0.7
+set rpt_path "./rpt"
+./rpt
+#set search_path "./lib"
+set search_path "./lib"
+./lib
+set hdlin_preserve_sequential true
+true
+switch $current_library {
+  ARM_180nm_rvt {
+    set synthetic_library "sc7_ch018ic_base_rvt_tt_typ_max_1p80v_25c.db"
+    set link_library "sc7_ch018ic_base_rvt_tt_typ_max_1p80v_25c.db"
+    set target_library "sc7_ch018ic_base_rvt_tt_typ_max_1p80v_25c.db"
+    report_lib "sc7_ch018ic_base_rvt_tt_typ_max_1p80v_25c.db"
+  }
+
+  ARM_180nm_sc7 {
+    set synthetic_library "scx_csm_18ic_tt_1p8v_25c.db"
+    set link_library "scx_csm_18ic_tt_1p8v_25c.db"
+    set target_library "scx_csm_18ic_tt_1p8v_25c.db"
+    report_lib "scx_csm_18ic_tt_1p8v_25c.db"
+  }
+
+  Synopsys_Educational {
+    set synthetic_library "saed32hvt_tt0p85v25c.db"
+    set link_library "saed32hvt_tt0p85v25c.db"
+    set target_library "saed32hvt_tt0p85v25c.db"
+    report_lib "saed32hvt_tt0p85v25c.db"
+  }
+
+  Synopsys_28nm {
+    set SYNOPSYS_28_STD_PATH /tools/synopsys/pdk28/SAED32_EDK/lib/stdcell_rvt/db_nldm
+    set SYNOPSYS_28_STD_HVT_PATH /tools/synopsys/pdk28/SAED32_EDK/lib/stdcell_hvt/db_nldm
+    set SYNOPSYS_28_SRAM_PATH /tools/synopsys/pdk28/SAED32_EDK/lib/sram/db_nldm
+
+    set std_library $SYNOPSYS_28_STD_PATH/saed32rvt_tt1p05v25c.db
+    set std_hvt_library $SYNOPSYS_28_STD_HVT_PATH/saed32hvt_tt1p05v25c.db
+    set sram_library $SYNOPSYS_28_SRAM_PATH/saed32sram_tt1p05v25c.db
+    set target_library [concat $std_library $std_hvt_library $sram_library]
+
+    set generic_symbol_library [list generic.sdb]
+    set synthetic_library [list dw_foundation.sldb ]
+
+    set link_library [concat     [concat "*" $target_library] $synthetic_library]
+  }
+
+
+
+  default {
+    set synthetic_library "../lib/NanGate_15nm_OCL.db"
+    set link_library "../lib/NanGate_15nm_OCL.db"
+    set target_library "../lib/NanGate_15nm_OCL.db"
+    report_lib "../lib/NanGate_15nm_OCL.db"
+  }
+}
+Warning: The '../lib/NanGate_15nm_OCL.db' library has not been read in yet. (UIL-3)
+0
+# Multicore setting
+#set multi_core_enable_analysis
+# 15 is the maximum availalbe number of cores in DC
+set_host_options -max_cores 15
+1
+#Read Files
+source ../file_list.tcl
+Running PRESTO HDLC
+Compiling source file ../src/tree.v
+Presto compilation completed successfully.
+Loading db file '/home/jianming/work/FileTransfer/AreaPower/sequential_circuit/lib/NanGate_15nm_OCL.db'
+Loading db file '/home/software/synopsys/syn/L-2016.03-SP1/libraries/syn/gtech.db'
+Loading db file '/home/software/synopsys/syn/L-2016.03-SP1/libraries/syn/standard.sldb'
+  Loading link library 'NanGate_15nm_OCL'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'tree_NUM4'.
+Information: Building the design 'selecter' instantiated from design 'tree_NUM4' with
+        the parameters "LEN=16". (HDL-193)
+Presto compilation completed successfully.
+1
+link
+
+  Linking design 'tree_NUM4'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  NanGate_15nm_OCL (library)  /home/jianming/work/FileTransfer/AreaPower/sequential_circuit/lib/NanGate_15nm_OCL.db
+
+1
+uniquify
+Information: Uniquified 3 instances of design 'selecter_LEN16'. (OPT-1056)
+1
+source ../scripts/dc/dc_timing.sdc
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     L-2016.03-SP1
+Date:        Thu Nov 19 13:40:33 2020
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                      1
+    Unconnected ports (LINT-28)                                     1
+--------------------------------------------------------------------------------
+
+Warning: In design 'tree_NUM4', port 'clk' is not connected to any nets. (LINT-28)
+1
+# Load in the timing constraint file
+update_timing
+Information: Updating design information... (UID-85)
+1
+# DC Compiler Options
+switch $compile_option {
+  regular {
+    compile -map_effort medium
+  }
+
+  ultra {
+    compile_ultra
+  }
+
+  ultra_no_ungroup {
+    compile_ultra -no_autoungroup
+  }
+}
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | L-2016.03-DWBB_201603.1 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+| NanGate_15nm_OCL                   | revision 1.0            |           |
+============================================================================
+
+
+Information: There are 1 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'selecter_LEN16_0'
+  Processing 'tree_NUM4'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      39.8      0.00       0.0       0.0                          
+    0:00:00      39.8      0.00       0.0       0.0                          
+    0:00:00      39.8      0.00       0.0       0.0                          
+    0:00:00      39.8      0.00       0.0       0.0                          
+    0:00:00      39.8      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+    0:00:00      23.7      0.00       0.0       0.0                          
+Loading db file '/home/jianming/work/FileTransfer/AreaPower/sequential_circuit/lib/NanGate_15nm_OCL.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+change_names -rules verilog -hierarchy -verbose
+
+Design          Type    Object                  New Name
+--------------------------------------------------------------------------------
+tree_NUM4       cell    genblk3[0].level0       genblk3_0__level0
+tree_NUM4       cell    genblk3[1].level0       genblk3_1__level0
+tree_NUM4       cell    genblk5[0].level1       genblk5_0__level1
+tree_NUM4       net     wire_inner[65][15]      wire_inner_65__15_
+tree_NUM4       net     wire_inner[65][14]      wire_inner_65__14_
+tree_NUM4       net     wire_inner[65][13]      wire_inner_65__13_
+tree_NUM4       net     wire_inner[65][12]      wire_inner_65__12_
+tree_NUM4       net     wire_inner[65][11]      wire_inner_65__11_
+tree_NUM4       net     wire_inner[65][10]      wire_inner_65__10_
+tree_NUM4       net     wire_inner[65][9]       wire_inner_65__9_
+tree_NUM4       net     wire_inner[65][8]       wire_inner_65__8_
+tree_NUM4       net     wire_inner[65][7]       wire_inner_65__7_
+tree_NUM4       net     wire_inner[65][6]       wire_inner_65__6_
+tree_NUM4       net     wire_inner[65][5]       wire_inner_65__5_
+tree_NUM4       net     wire_inner[65][4]       wire_inner_65__4_
+tree_NUM4       net     wire_inner[65][3]       wire_inner_65__3_
+tree_NUM4       net     wire_inner[65][2]       wire_inner_65__2_
+tree_NUM4       net     wire_inner[65][1]       wire_inner_65__1_
+tree_NUM4       net     wire_inner[65][0]       wire_inner_65__0_
+tree_NUM4       net     wire_inner[64][15]      wire_inner_64__15_
+tree_NUM4       net     wire_inner[64][14]      wire_inner_64__14_
+tree_NUM4       net     wire_inner[64][13]      wire_inner_64__13_
+tree_NUM4       net     wire_inner[64][12]      wire_inner_64__12_
+tree_NUM4       net     wire_inner[64][11]      wire_inner_64__11_
+tree_NUM4       net     wire_inner[64][10]      wire_inner_64__10_
+tree_NUM4       net     wire_inner[64][9]       wire_inner_64__9_
+tree_NUM4       net     wire_inner[64][8]       wire_inner_64__8_
+tree_NUM4       net     wire_inner[64][7]       wire_inner_64__7_
+tree_NUM4       net     wire_inner[64][6]       wire_inner_64__6_
+tree_NUM4       net     wire_inner[64][5]       wire_inner_64__5_
+tree_NUM4       net     wire_inner[64][4]       wire_inner_64__4_
+tree_NUM4       net     wire_inner[64][3]       wire_inner_64__3_
+tree_NUM4       net     wire_inner[64][2]       wire_inner_64__2_
+tree_NUM4       net     wire_inner[64][1]       wire_inner_64__1_
+tree_NUM4       net     wire_inner[64][0]       wire_inner_64__0_
+1
+write -format verilog -hierarchy -output $project-synthesized.v
+Writing verilog file '/home/jianming/work/FileTransfer/AreaPower/sequential_circuit/SYNTH/tree-synthesized.v'.
+1
+write_sdc $project-synthesized.sdc
+1
+write_sdf $project-synthesized.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/jianming/work/FileTransfer/AreaPower/sequential_circuit/SYNTH/tree-synthesized.sdf'. (WT-3)
+Information: Updating design information... (UID-85)
+1
+# timing, area, power reports
+report_timing   -nworst 50                 -max_paths 50                 -path full                 -delay max                 -significant_digits 3                 -sort_by slack      > $rpt_path/timing_max.rpt
+report_timing   -nworst 50                 -max_paths 50                 -path full                 -delay min                 -significant_digits 3                 -sort_by slack      > $rpt_path/timing_min.rpt
+report_timing                       > $rpt_path/timing.rpt
+report_timing_derate                > $rpt_path/timing_derate.rpt
+report_area     -hierarchy          > $rpt_path/area.rpt
+report_power    -hier               > $rpt_path/power.rpt
+report_power                        > $rpt_path/power_no_hier.rpt
+report_net      -cell_degradation   > $rpt_path/net.rpt
+report_clock_gating                 > $rpt_path/clock_gating.rpt
+# Save the synthesis state
+write -hierarchy -format ddc -output synthesis.ddc
+Writing ddc file 'synthesis.ddc'.
+1
+quit
+
+Memory usage for main task 91 Mbytes.
+Memory usage for this session 91 Mbytes.
+CPU usage for this session 2 seconds ( 0.00 hours ).
+
+Thank you...
+

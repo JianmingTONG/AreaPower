@@ -1,0 +1,1713 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 50
+        -max_paths 50
+        -sort_by slack
+Design : tree_NUM4
+Version: L-2016.03-SP1
+Date   : Thu Nov 19 13:40:33 2020
+****************************************
+
+Operating Conditions: typical   Library: NanGate_15nm_OCL
+Wire Load Model Mode: top
+
+  Startpoint: in[48] (input port clocked by clk_input)
+  Endpoint: sum[0] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[48] (in)                                            0.000      0.002 f
+  genblk3_1__level0/b[0] (selecter_LEN16_1)              0.000      0.002 f
+  genblk3_1__level0/U32/Z (AND2_X1)                      2.435      2.437 f
+  genblk3_1__level0/out[0] (selecter_LEN16_1)            0.000      2.437 f
+  genblk5_0__level1/b[0] (selecter_LEN16_0)              0.000      2.437 f
+  genblk5_0__level1/U32/Z (AND2_X1)                     12.385     14.821 f
+  genblk5_0__level1/out[0] (selecter_LEN16_0)            0.000     14.821 f
+  sum[0] (out)                                           0.000     14.821 f
+  data arrival time                                                14.821
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -14.821
+  --------------------------------------------------------------------------
+  slack (MET)                                                      14.821
+
+
+  Startpoint: in[32] (input port clocked by clk_input)
+  Endpoint: sum[0] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[32] (in)                                            0.000      0.002 f
+  genblk3_1__level0/a[0] (selecter_LEN16_1)              0.000      0.002 f
+  genblk3_1__level0/U32/Z (AND2_X1)                      2.761      2.763 f
+  genblk3_1__level0/out[0] (selecter_LEN16_1)            0.000      2.763 f
+  genblk5_0__level1/b[0] (selecter_LEN16_0)              0.000      2.763 f
+  genblk5_0__level1/U32/Z (AND2_X1)                     12.385     15.148 f
+  genblk5_0__level1/out[0] (selecter_LEN16_0)            0.000     15.148 f
+  sum[0] (out)                                           0.000     15.148 f
+  data arrival time                                                15.148
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.148
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.148
+
+
+  Startpoint: in[15] (input port clocked by clk_input)
+  Endpoint: sum[15] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[15] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[15] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U30/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U15/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[15] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[15] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U30/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U29/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[15] (selecter_LEN16_0)           0.000     15.387 f
+  sum[15] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[14] (input port clocked by clk_input)
+  Endpoint: sum[14] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[14] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[14] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U29/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U14/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[14] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[14] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U28/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U27/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[14] (selecter_LEN16_0)           0.000     15.387 f
+  sum[14] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[13] (input port clocked by clk_input)
+  Endpoint: sum[13] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[13] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[13] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U28/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U13/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[13] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[13] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U26/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U25/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[13] (selecter_LEN16_0)           0.000     15.387 f
+  sum[13] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[12] (input port clocked by clk_input)
+  Endpoint: sum[12] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[12] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[12] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U27/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U12/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[12] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[12] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U24/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U23/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[12] (selecter_LEN16_0)           0.000     15.387 f
+  sum[12] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[11] (input port clocked by clk_input)
+  Endpoint: sum[11] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[11] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[11] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U26/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U11/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[11] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[11] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U22/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U21/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[11] (selecter_LEN16_0)           0.000     15.387 f
+  sum[11] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[10] (input port clocked by clk_input)
+  Endpoint: sum[10] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[10] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[10] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U25/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U10/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[10] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[10] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U20/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U19/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[10] (selecter_LEN16_0)           0.000     15.387 f
+  sum[10] (out)                                          0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[9] (input port clocked by clk_input)
+  Endpoint: sum[9] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[9] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[9] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U24/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U9/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[9] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[9] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U18/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U17/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[9] (selecter_LEN16_0)            0.000     15.387 f
+  sum[9] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[8] (input port clocked by clk_input)
+  Endpoint: sum[8] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[8] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[8] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U23/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U8/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[8] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[8] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U16/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U15/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[8] (selecter_LEN16_0)            0.000     15.387 f
+  sum[8] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[7] (input port clocked by clk_input)
+  Endpoint: sum[7] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[7] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[7] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U22/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U7/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[7] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[7] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U14/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U13/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[7] (selecter_LEN16_0)            0.000     15.387 f
+  sum[7] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[6] (input port clocked by clk_input)
+  Endpoint: sum[6] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[6] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[6] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U21/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U6/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[6] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[6] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U12/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U11/ZN (INV_X1)                     10.781     15.387 f
+  genblk5_0__level1/out[6] (selecter_LEN16_0)            0.000     15.387 f
+  sum[6] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[5] (input port clocked by clk_input)
+  Endpoint: sum[5] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[5] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[5] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U20/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U5/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[5] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[5] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U10/ZN (AOI22_X1)                    1.865      4.606 r
+  genblk5_0__level1/U9/ZN (INV_X1)                      10.781     15.387 f
+  genblk5_0__level1/out[5] (selecter_LEN16_0)            0.000     15.387 f
+  sum[5] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[4] (input port clocked by clk_input)
+  Endpoint: sum[4] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[4] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[4] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U19/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U4/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[4] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[4] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U8/ZN (AOI22_X1)                     1.865      4.606 r
+  genblk5_0__level1/U7/ZN (INV_X1)                      10.781     15.387 f
+  genblk5_0__level1/out[4] (selecter_LEN16_0)            0.000     15.387 f
+  sum[4] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[3] (input port clocked by clk_input)
+  Endpoint: sum[3] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[3] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[3] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U18/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U3/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[3] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[3] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U6/ZN (AOI22_X1)                     1.865      4.606 r
+  genblk5_0__level1/U5/ZN (INV_X1)                      10.781     15.387 f
+  genblk5_0__level1/out[3] (selecter_LEN16_0)            0.000     15.387 f
+  sum[3] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[2] (input port clocked by clk_input)
+  Endpoint: sum[2] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[2] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[2] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U17/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U2/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[2] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[2] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U4/ZN (AOI22_X1)                     1.865      4.606 r
+  genblk5_0__level1/U3/ZN (INV_X1)                      10.781     15.387 f
+  genblk5_0__level1/out[2] (selecter_LEN16_0)            0.000     15.387 f
+  sum[2] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[1] (input port clocked by clk_input)
+  Endpoint: sum[1] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[1] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[1] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U16/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U1/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[1] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[1] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U2/ZN (AOI22_X1)                     1.865      4.606 r
+  genblk5_0__level1/U1/ZN (INV_X1)                      10.781     15.387 f
+  genblk5_0__level1/out[1] (selecter_LEN16_0)            0.000     15.387 f
+  sum[1] (out)                                           0.000     15.387 f
+  data arrival time                                                15.387
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.387
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.387
+
+
+  Startpoint: in[15] (input port clocked by clk_input)
+  Endpoint: sum[15] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[15] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[15] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U30/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U15/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[15] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[15] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U30/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U29/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[15] (selecter_LEN16_0)           0.000     15.739 f
+  sum[15] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[14] (input port clocked by clk_input)
+  Endpoint: sum[14] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[14] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[14] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U29/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U14/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[14] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[14] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U28/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U27/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[14] (selecter_LEN16_0)           0.000     15.739 f
+  sum[14] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[13] (input port clocked by clk_input)
+  Endpoint: sum[13] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[13] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[13] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U28/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U13/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[13] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[13] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U26/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U25/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[13] (selecter_LEN16_0)           0.000     15.739 f
+  sum[13] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[12] (input port clocked by clk_input)
+  Endpoint: sum[12] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[12] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[12] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U27/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U12/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[12] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[12] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U24/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U23/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[12] (selecter_LEN16_0)           0.000     15.739 f
+  sum[12] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[11] (input port clocked by clk_input)
+  Endpoint: sum[11] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[11] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[11] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U26/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U11/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[11] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[11] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U22/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U21/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[11] (selecter_LEN16_0)           0.000     15.739 f
+  sum[11] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[10] (input port clocked by clk_input)
+  Endpoint: sum[10] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[10] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[10] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U25/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U10/ZN (INV_X1)                      1.083      2.741 f
+  genblk3_0__level0/out[10] (selecter_LEN16_2)           0.000      2.741 f
+  genblk5_0__level1/a[10] (selecter_LEN16_0)             0.000      2.741 f
+  genblk5_0__level1/U20/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U19/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[10] (selecter_LEN16_0)           0.000     15.739 f
+  sum[10] (out)                                          0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[9] (input port clocked by clk_input)
+  Endpoint: sum[9] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[9] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[9] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U24/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U9/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[9] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[9] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U18/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U17/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[9] (selecter_LEN16_0)            0.000     15.739 f
+  sum[9] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[8] (input port clocked by clk_input)
+  Endpoint: sum[8] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[8] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[8] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U23/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U8/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[8] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[8] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U16/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U15/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[8] (selecter_LEN16_0)            0.000     15.739 f
+  sum[8] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[7] (input port clocked by clk_input)
+  Endpoint: sum[7] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[7] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[7] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U22/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U7/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[7] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[7] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U14/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U13/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[7] (selecter_LEN16_0)            0.000     15.739 f
+  sum[7] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[6] (input port clocked by clk_input)
+  Endpoint: sum[6] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[6] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[6] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U21/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U6/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[6] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[6] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U12/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U11/ZN (INV_X1)                     10.781     15.739 f
+  genblk5_0__level1/out[6] (selecter_LEN16_0)            0.000     15.739 f
+  sum[6] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[5] (input port clocked by clk_input)
+  Endpoint: sum[5] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[5] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[5] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U20/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U5/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[5] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[5] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U10/ZN (AOI22_X1)                    2.217      4.958 r
+  genblk5_0__level1/U9/ZN (INV_X1)                      10.781     15.739 f
+  genblk5_0__level1/out[5] (selecter_LEN16_0)            0.000     15.739 f
+  sum[5] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[4] (input port clocked by clk_input)
+  Endpoint: sum[4] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[4] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[4] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U19/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U4/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[4] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[4] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U8/ZN (AOI22_X1)                     2.217      4.958 r
+  genblk5_0__level1/U7/ZN (INV_X1)                      10.781     15.739 f
+  genblk5_0__level1/out[4] (selecter_LEN16_0)            0.000     15.739 f
+  sum[4] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[3] (input port clocked by clk_input)
+  Endpoint: sum[3] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[3] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[3] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U18/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U3/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[3] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[3] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U6/ZN (AOI22_X1)                     2.217      4.958 r
+  genblk5_0__level1/U5/ZN (INV_X1)                      10.781     15.739 f
+  genblk5_0__level1/out[3] (selecter_LEN16_0)            0.000     15.739 f
+  sum[3] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[2] (input port clocked by clk_input)
+  Endpoint: sum[2] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[2] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[2] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U17/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U2/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[2] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[2] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U4/ZN (AOI22_X1)                     2.217      4.958 r
+  genblk5_0__level1/U3/ZN (INV_X1)                      10.781     15.739 f
+  genblk5_0__level1/out[2] (selecter_LEN16_0)            0.000     15.739 f
+  sum[2] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[1] (input port clocked by clk_input)
+  Endpoint: sum[1] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[1] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[1] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U16/ZN (AOI22_X1)                    1.656      1.658 r
+  genblk3_0__level0/U1/ZN (INV_X1)                       1.083      2.741 f
+  genblk3_0__level0/out[1] (selecter_LEN16_2)            0.000      2.741 f
+  genblk5_0__level1/a[1] (selecter_LEN16_0)              0.000      2.741 f
+  genblk5_0__level1/U2/ZN (AOI22_X1)                     2.217      4.958 r
+  genblk5_0__level1/U1/ZN (INV_X1)                      10.781     15.739 f
+  genblk5_0__level1/out[1] (selecter_LEN16_0)            0.000     15.739 f
+  sum[1] (out)                                           0.000     15.739 f
+  data arrival time                                                15.739
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.739
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.739
+
+
+  Startpoint: in[15] (input port clocked by clk_input)
+  Endpoint: sum[15] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[15] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[15] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U30/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U15/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[15] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[15] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U30/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U29/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[15] (selecter_LEN16_0)           0.000     15.766 f
+  sum[15] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[14] (input port clocked by clk_input)
+  Endpoint: sum[14] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[14] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[14] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U29/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U14/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[14] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[14] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U28/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U27/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[14] (selecter_LEN16_0)           0.000     15.766 f
+  sum[14] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[13] (input port clocked by clk_input)
+  Endpoint: sum[13] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[13] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[13] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U28/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U13/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[13] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[13] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U26/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U25/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[13] (selecter_LEN16_0)           0.000     15.766 f
+  sum[13] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[12] (input port clocked by clk_input)
+  Endpoint: sum[12] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[12] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[12] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U27/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U12/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[12] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[12] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U24/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U23/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[12] (selecter_LEN16_0)           0.000     15.766 f
+  sum[12] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[11] (input port clocked by clk_input)
+  Endpoint: sum[11] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[11] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[11] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U26/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U11/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[11] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[11] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U22/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U21/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[11] (selecter_LEN16_0)           0.000     15.766 f
+  sum[11] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[10] (input port clocked by clk_input)
+  Endpoint: sum[10] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[10] (in)                                            0.000      0.002 f
+  genblk3_0__level0/a[10] (selecter_LEN16_2)             0.000      0.002 f
+  genblk3_0__level0/U25/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U10/ZN (INV_X1)                      1.083      3.120 f
+  genblk3_0__level0/out[10] (selecter_LEN16_2)           0.000      3.120 f
+  genblk5_0__level1/a[10] (selecter_LEN16_0)             0.000      3.120 f
+  genblk5_0__level1/U20/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U19/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[10] (selecter_LEN16_0)           0.000     15.766 f
+  sum[10] (out)                                          0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[9] (input port clocked by clk_input)
+  Endpoint: sum[9] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[9] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[9] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U24/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U9/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[9] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[9] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U18/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U17/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[9] (selecter_LEN16_0)            0.000     15.766 f
+  sum[9] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[8] (input port clocked by clk_input)
+  Endpoint: sum[8] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[8] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[8] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U23/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U8/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[8] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[8] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U16/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U15/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[8] (selecter_LEN16_0)            0.000     15.766 f
+  sum[8] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[7] (input port clocked by clk_input)
+  Endpoint: sum[7] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[7] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[7] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U22/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U7/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[7] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[7] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U14/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U13/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[7] (selecter_LEN16_0)            0.000     15.766 f
+  sum[7] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[6] (input port clocked by clk_input)
+  Endpoint: sum[6] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[6] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[6] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U21/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U6/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[6] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[6] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U12/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U11/ZN (INV_X1)                     10.781     15.766 f
+  genblk5_0__level1/out[6] (selecter_LEN16_0)            0.000     15.766 f
+  sum[6] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[5] (input port clocked by clk_input)
+  Endpoint: sum[5] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[5] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[5] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U20/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U5/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[5] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[5] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U10/ZN (AOI22_X1)                    1.865      4.985 r
+  genblk5_0__level1/U9/ZN (INV_X1)                      10.781     15.766 f
+  genblk5_0__level1/out[5] (selecter_LEN16_0)            0.000     15.766 f
+  sum[5] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[4] (input port clocked by clk_input)
+  Endpoint: sum[4] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[4] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[4] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U19/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U4/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[4] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[4] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U8/ZN (AOI22_X1)                     1.865      4.985 r
+  genblk5_0__level1/U7/ZN (INV_X1)                      10.781     15.766 f
+  genblk5_0__level1/out[4] (selecter_LEN16_0)            0.000     15.766 f
+  sum[4] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[3] (input port clocked by clk_input)
+  Endpoint: sum[3] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[3] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[3] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U18/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U3/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[3] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[3] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U6/ZN (AOI22_X1)                     1.865      4.985 r
+  genblk5_0__level1/U5/ZN (INV_X1)                      10.781     15.766 f
+  genblk5_0__level1/out[3] (selecter_LEN16_0)            0.000     15.766 f
+  sum[3] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[2] (input port clocked by clk_input)
+  Endpoint: sum[2] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[2] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[2] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U17/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U2/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[2] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[2] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U4/ZN (AOI22_X1)                     1.865      4.985 r
+  genblk5_0__level1/U3/ZN (INV_X1)                      10.781     15.766 f
+  genblk5_0__level1/out[2] (selecter_LEN16_0)            0.000     15.766 f
+  sum[2] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[1] (input port clocked by clk_input)
+  Endpoint: sum[1] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[1] (in)                                             0.000      0.002 f
+  genblk3_0__level0/a[1] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U16/ZN (AOI22_X1)                    2.035      2.037 r
+  genblk3_0__level0/U1/ZN (INV_X1)                       1.083      3.120 f
+  genblk3_0__level0/out[1] (selecter_LEN16_2)            0.000      3.120 f
+  genblk5_0__level1/a[1] (selecter_LEN16_0)              0.000      3.120 f
+  genblk5_0__level1/U2/ZN (AOI22_X1)                     1.865      4.985 r
+  genblk5_0__level1/U1/ZN (INV_X1)                      10.781     15.766 f
+  genblk5_0__level1/out[1] (selecter_LEN16_0)            0.000     15.766 f
+  sum[1] (out)                                           0.000     15.766 f
+  data arrival time                                                15.766
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.766
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.766
+
+
+  Startpoint: in[19] (input port clocked by clk_input)
+  Endpoint: sum[3] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[19] (in)                                            0.000      0.002 f
+  genblk3_0__level0/b[3] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U18/ZN (AOI22_X1)                    2.175      2.177 r
+  genblk3_0__level0/U3/ZN (INV_X1)                       1.083      3.260 f
+  genblk3_0__level0/out[3] (selecter_LEN16_2)            0.000      3.260 f
+  genblk5_0__level1/a[3] (selecter_LEN16_0)              0.000      3.260 f
+  genblk5_0__level1/U6/ZN (AOI22_X1)                     1.865      5.126 r
+  genblk5_0__level1/U5/ZN (INV_X1)                      10.781     15.907 f
+  genblk5_0__level1/out[3] (selecter_LEN16_0)            0.000     15.907 f
+  sum[3] (out)                                           0.000     15.907 f
+  data arrival time                                                15.907
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.907
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.907
+
+
+  Startpoint: in[18] (input port clocked by clk_input)
+  Endpoint: sum[2] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[18] (in)                                            0.000      0.002 f
+  genblk3_0__level0/b[2] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U17/ZN (AOI22_X1)                    2.175      2.177 r
+  genblk3_0__level0/U2/ZN (INV_X1)                       1.083      3.260 f
+  genblk3_0__level0/out[2] (selecter_LEN16_2)            0.000      3.260 f
+  genblk5_0__level1/a[2] (selecter_LEN16_0)              0.000      3.260 f
+  genblk5_0__level1/U4/ZN (AOI22_X1)                     1.865      5.126 r
+  genblk5_0__level1/U3/ZN (INV_X1)                      10.781     15.907 f
+  genblk5_0__level1/out[2] (selecter_LEN16_0)            0.000     15.907 f
+  sum[2] (out)                                           0.000     15.907 f
+  data arrival time                                                15.907
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.907
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.907
+
+
+  Startpoint: in[17] (input port clocked by clk_input)
+  Endpoint: sum[1] (output port clocked by clk_input)
+  Path Group: clk_input
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  input external delay                                   0.002      0.002 f
+  in[17] (in)                                            0.000      0.002 f
+  genblk3_0__level0/b[1] (selecter_LEN16_2)              0.000      0.002 f
+  genblk3_0__level0/U16/ZN (AOI22_X1)                    2.175      2.177 r
+  genblk3_0__level0/U1/ZN (INV_X1)                       1.083      3.260 f
+  genblk3_0__level0/out[1] (selecter_LEN16_2)            0.000      3.260 f
+  genblk5_0__level1/a[1] (selecter_LEN16_0)              0.000      3.260 f
+  genblk5_0__level1/U2/ZN (AOI22_X1)                     1.865      5.126 r
+  genblk5_0__level1/U1/ZN (INV_X1)                      10.781     15.907 f
+  genblk5_0__level1/out[1] (selecter_LEN16_0)            0.000     15.907 f
+  sum[1] (out)                                           0.000     15.907 f
+  data arrival time                                                15.907
+
+  clock clk_input (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.000      0.000
+  clock uncertainty                                      0.002      0.002
+  output external delay                                 -0.002      0.000
+  data required time                                                0.000
+  --------------------------------------------------------------------------
+  data required time                                                0.000
+  data arrival time                                               -15.907
+  --------------------------------------------------------------------------
+  slack (MET)                                                      15.907
+
+
+1
