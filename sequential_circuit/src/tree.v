@@ -116,94 +116,94 @@ module tree#(parameter NUM = 4096, LEN = 16, LEVEL = $clog2(NUM) )(
         
     for (index_num = 0; index_num < NUM_LEVEL0-IS_ODD_NUM_INPUT_LEVEL0; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level0(.a(wire_inner[START_LEVEL0 + 2*index_num]),.b(wire_inner[START_LEVEL0+2*index_num+1]),.out(wire_inner[START_LEVEL1+index_num]));
+        selecter#(.LEN(LEN)) level0(.clk(clk), .a(wire_inner[START_LEVEL0 + 2*index_num]),.b(wire_inner[START_LEVEL0+2*index_num+1]),.out(wire_inner[START_LEVEL1+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL0 && (NUM_LEVEL0>0))
-        selecter#(.LEN(LEN)) level0_last(.a(wire_inner[START_LEVEL0+2*(NUM_LEVEL0-1)]),.b(0),.out(wire_inner[START_LEVEL1+NUM_LEVEL0 - 1]));
+        selecter#(.LEN(LEN)) level0_last(.clk(clk), .a(wire_inner[START_LEVEL0+2*(NUM_LEVEL0-1)]),.b(0),.out(wire_inner[START_LEVEL1+NUM_LEVEL0 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL1-IS_ODD_NUM_INPUT_LEVEL1; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level1(.a(wire_inner[START_LEVEL1+2*index_num]),.b(wire_inner[START_LEVEL1+2*index_num+1]),.out(wire_inner[START_LEVEL2+index_num]));
+        selecter#(.LEN(LEN)) level1(.clk(clk), .a(wire_inner[START_LEVEL1+2*index_num]),.b(wire_inner[START_LEVEL1+2*index_num+1]),.out(wire_inner[START_LEVEL2+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL1 && (NUM_LEVEL1>0))
-        selecter#(.LEN(LEN)) level1_last(.a(wire_inner[START_LEVEL1+2*(NUM_LEVEL1-1)]),.b(0),.out(wire_inner[START_LEVEL2+NUM_LEVEL1 - 1]));
+        selecter#(.LEN(LEN)) level1_last(.clk(clk), .a(wire_inner[START_LEVEL1+2*(NUM_LEVEL1-1)]),.b(0),.out(wire_inner[START_LEVEL2+NUM_LEVEL1 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL2-IS_ODD_NUM_INPUT_LEVEL2; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level2(.a(wire_inner[START_LEVEL2+2*index_num]),.b(wire_inner[START_LEVEL2+2*index_num+1]),.out(wire_inner[START_LEVEL3+index_num]));
+        selecter#(.LEN(LEN)) level2(.clk(clk), .a(wire_inner[START_LEVEL2+2*index_num]),.b(wire_inner[START_LEVEL2+2*index_num+1]),.out(wire_inner[START_LEVEL3+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL2 && (NUM_LEVEL2>0))
-        selecter#(.LEN(LEN)) level2_last(.a(wire_inner[START_LEVEL2+2*(NUM_LEVEL2-1)]),.b(0),.out(wire_inner[START_LEVEL3+NUM_LEVEL2 - 1]));
+        selecter#(.LEN(LEN)) level2_last(.clk(clk), .a(wire_inner[START_LEVEL2+2*(NUM_LEVEL2-1)]),.b(0),.out(wire_inner[START_LEVEL3+NUM_LEVEL2 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL3-IS_ODD_NUM_INPUT_LEVEL3; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level3(.a(wire_inner[START_LEVEL3+2*index_num]),.b(wire_inner[START_LEVEL3+2*index_num+1]),.out(wire_inner[START_LEVEL4+index_num]));
+        selecter#(.LEN(LEN)) level3(.clk(clk), .a(wire_inner[START_LEVEL3+2*index_num]),.b(wire_inner[START_LEVEL3+2*index_num+1]),.out(wire_inner[START_LEVEL4+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL3 && (NUM_LEVEL3>0))
-        selecter#(.LEN(LEN)) level3_last(.a(wire_inner[START_LEVEL3+2*(NUM_LEVEL3-1)]),.b(0),.out(wire_inner[START_LEVEL4+NUM_LEVEL3 - 1]));
+        selecter#(.LEN(LEN)) level3_last(.clk(clk), .a(wire_inner[START_LEVEL3+2*(NUM_LEVEL3-1)]),.b(0),.out(wire_inner[START_LEVEL4+NUM_LEVEL3 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL4-IS_ODD_NUM_INPUT_LEVEL4; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level4(.a(wire_inner[START_LEVEL4+2*index_num]),.b(wire_inner[START_LEVEL4+2*index_num+1]),.out(wire_inner[START_LEVEL5+index_num]));
+        selecter#(.LEN(LEN)) level4(.clk(clk), .a(wire_inner[START_LEVEL4+2*index_num]),.b(wire_inner[START_LEVEL4+2*index_num+1]),.out(wire_inner[START_LEVEL5+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL4 && (NUM_LEVEL4>0))
-        selecter#(.LEN(LEN)) level4_last(.a(wire_inner[START_LEVEL4+2*(NUM_LEVEL4-1)]),.b(0),.out(wire_inner[START_LEVEL5+NUM_LEVEL4 - 1]));
+        selecter#(.LEN(LEN)) level4_last(.clk(clk), .a(wire_inner[START_LEVEL4+2*(NUM_LEVEL4-1)]),.b(0),.out(wire_inner[START_LEVEL5+NUM_LEVEL4 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL5-IS_ODD_NUM_INPUT_LEVEL5; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level5(.a(wire_inner[START_LEVEL5+2*index_num]),.b(wire_inner[START_LEVEL5+2*index_num+1]),.out(wire_inner[START_LEVEL6+index_num]));
+        selecter#(.LEN(LEN)) level5(.clk(clk), .a(wire_inner[START_LEVEL5+2*index_num]),.b(wire_inner[START_LEVEL5+2*index_num+1]),.out(wire_inner[START_LEVEL6+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL5 && (NUM_LEVEL5>0))
-        selecter#(.LEN(LEN)) level5_last(.a(wire_inner[START_LEVEL5+2*(NUM_LEVEL5-1)]),.b(0),.out(wire_inner[START_LEVEL6+NUM_LEVEL5 - 1]));
+        selecter#(.LEN(LEN)) level5_last(.clk(clk), .a(wire_inner[START_LEVEL5+2*(NUM_LEVEL5-1)]),.b(0),.out(wire_inner[START_LEVEL6+NUM_LEVEL5 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL6-IS_ODD_NUM_INPUT_LEVEL6; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level6(.a(wire_inner[START_LEVEL6+2*index_num]),.b(wire_inner[START_LEVEL6+2*index_num+1]),.out(wire_inner[START_LEVEL7+index_num]));
+        selecter#(.LEN(LEN)) level6(.clk(clk), .a(wire_inner[START_LEVEL6+2*index_num]),.b(wire_inner[START_LEVEL6+2*index_num+1]),.out(wire_inner[START_LEVEL7+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL6 && (NUM_LEVEL6>0))
-        selecter#(.LEN(LEN)) level6_last(.a(wire_inner[START_LEVEL6+2*(NUM_LEVEL6-1)]),.b(0),.out(wire_inner[START_LEVEL7+NUM_LEVEL6 - 1]));
+        selecter#(.LEN(LEN)) level6_last(.clk(clk), .a(wire_inner[START_LEVEL6+2*(NUM_LEVEL6-1)]),.b(0),.out(wire_inner[START_LEVEL7+NUM_LEVEL6 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL7-IS_ODD_NUM_INPUT_LEVEL7; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level7(.a(wire_inner[START_LEVEL7+2*index_num]),.b(wire_inner[START_LEVEL7+2*index_num+1]),.out(wire_inner[START_LEVEL8+index_num]));
+        selecter#(.LEN(LEN)) level7(.clk(clk), .a(wire_inner[START_LEVEL7+2*index_num]),.b(wire_inner[START_LEVEL7+2*index_num+1]),.out(wire_inner[START_LEVEL8+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL7 && (NUM_LEVEL7>0))
-        selecter#(.LEN(LEN)) level7_last(.a(wire_inner[START_LEVEL7+2*(NUM_LEVEL7-1)]),.b(0),.out(wire_inner[START_LEVEL8+NUM_LEVEL7 - 1]));
+        selecter#(.LEN(LEN)) level7_last(.clk(clk), .a(wire_inner[START_LEVEL7+2*(NUM_LEVEL7-1)]),.b(0),.out(wire_inner[START_LEVEL8+NUM_LEVEL7 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL8-IS_ODD_NUM_INPUT_LEVEL8; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level8(.a(wire_inner[START_LEVEL8+2*index_num]),.b(wire_inner[START_LEVEL8+2*index_num+1]),.out(wire_inner[START_LEVEL9+index_num]));
+        selecter#(.LEN(LEN)) level8(.clk(clk), .a(wire_inner[START_LEVEL8+2*index_num]),.b(wire_inner[START_LEVEL8+2*index_num+1]),.out(wire_inner[START_LEVEL9+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL8 && (NUM_LEVEL8>0))
-        selecter#(.LEN(LEN)) level8_last(.a(wire_inner[START_LEVEL8+2*(NUM_LEVEL8-1)]),.b(0),.out(wire_inner[START_LEVEL9+NUM_LEVEL8 - 1]));
+        selecter#(.LEN(LEN)) level8_last(.clk(clk), .a(wire_inner[START_LEVEL8+2*(NUM_LEVEL8-1)]),.b(0),.out(wire_inner[START_LEVEL9+NUM_LEVEL8 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL9-IS_ODD_NUM_INPUT_LEVEL9; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level9(.a(wire_inner[START_LEVEL9+2*index_num]),.b(wire_inner[START_LEVEL9+2*index_num+1]),.out(wire_inner[START_LEVEL10+index_num]));
+        selecter#(.LEN(LEN)) level9(.clk(clk), .a(wire_inner[START_LEVEL9+2*index_num]),.b(wire_inner[START_LEVEL9+2*index_num+1]),.out(wire_inner[START_LEVEL10+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL9 && (NUM_LEVEL9>0))
-        selecter#(.LEN(LEN)) level9_last(.a(wire_inner[START_LEVEL9+2*(NUM_LEVEL9-1)]),.b(0),.out(wire_inner[START_LEVEL10+NUM_LEVEL9 - 1]));   
+        selecter#(.LEN(LEN)) level9_last(.clk(clk), .a(wire_inner[START_LEVEL9+2*(NUM_LEVEL9-1)]),.b(0),.out(wire_inner[START_LEVEL10+NUM_LEVEL9 - 1]));   
     
     for (index_num = 0; index_num < NUM_LEVEL10-IS_ODD_NUM_INPUT_LEVEL10; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level10(.a(wire_inner[START_LEVEL10+2*index_num]),.b(wire_inner[START_LEVEL10+2*index_num+1]),.out(wire_inner[START_LEVEL11+index_num]));
+        selecter#(.LEN(LEN)) level10(.clk(clk), .a(wire_inner[START_LEVEL10+2*index_num]),.b(wire_inner[START_LEVEL10+2*index_num+1]),.out(wire_inner[START_LEVEL11+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL10 && (NUM_LEVEL10>0))
-        selecter#(.LEN(LEN)) level10_last(.a(wire_inner[START_LEVEL10+2*(NUM_LEVEL10-1)]),.b(0),.out(wire_inner[START_LEVEL11+NUM_LEVEL10 - 1]));
+        selecter#(.LEN(LEN)) level10_last(.clk(clk), .a(wire_inner[START_LEVEL10+2*(NUM_LEVEL10-1)]),.b(0),.out(wire_inner[START_LEVEL11+NUM_LEVEL10 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL11-IS_ODD_NUM_INPUT_LEVEL11; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level11(.a(wire_inner[START_LEVEL11+2*index_num]),.b(wire_inner[START_LEVEL11+2*index_num+1]),.out(wire_inner[START_LEVEL12+index_num]));
+        selecter#(.LEN(LEN)) level11(.clk(clk), .a(wire_inner[START_LEVEL11+2*index_num]),.b(wire_inner[START_LEVEL11+2*index_num+1]),.out(wire_inner[START_LEVEL12+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL11 && (NUM_LEVEL11>0))
-        selecter#(.LEN(LEN)) level11_last(.a(wire_inner[START_LEVEL11+2*(NUM_LEVEL11-1)]),.b(0),.out(wire_inner[START_LEVEL12+NUM_LEVEL11 - 1]));
+        selecter#(.LEN(LEN)) level11_last(.clk(clk), .a(wire_inner[START_LEVEL11+2*(NUM_LEVEL11-1)]),.b(0),.out(wire_inner[START_LEVEL12+NUM_LEVEL11 - 1]));
     
     for (index_num = 0; index_num < NUM_LEVEL12-IS_ODD_NUM_INPUT_LEVEL12; index_num = index_num + 1)
     begin
-        selecter#(.LEN(LEN)) level12(.a(wire_inner[START_LEVEL12+2*index_num]),.b(wire_inner[START_LEVEL12+2*index_num+1]),.out(wire_inner[START_LEVEL13+index_num]));
+        selecter#(.LEN(LEN)) level12(.clk(clk), .a(wire_inner[START_LEVEL12+2*index_num]),.b(wire_inner[START_LEVEL12+2*index_num+1]),.out(wire_inner[START_LEVEL13+index_num]));
     end
     if(IS_ODD_NUM_INPUT_LEVEL12 && (NUM_LEVEL12>0))
-        selecter#(.LEN(LEN)) level12_last(.a(wire_inner[START_LEVEL12+2*(NUM_LEVEL12-1)]),.b(0),.out(wire_inner[START_LEVEL13+NUM_LEVEL12 - 1]));
+        selecter#(.LEN(LEN)) level12_last(.clk(clk), .a(wire_inner[START_LEVEL12+2*(NUM_LEVEL12-1)]),.b(0),.out(wire_inner[START_LEVEL13+NUM_LEVEL12 - 1]));
     endgenerate
  
     always@*
@@ -216,14 +216,15 @@ endmodule
 
 
 module selecter#(parameter LEN = 16)(
-    input  [LEN-1:0] a,
-    input  [LEN-1:0] b,
+    input             clk,
+    input  [LEN-1:0]  a,
+    input  [LEN-1:0]  b,
     output [LEN-1:0]  out
     );
     reg  [LEN-1:0]  out_inner;
-    always@*
+    always@(posedge clk)
     begin
-        out_inner = a[0]==0? a : b;
+        out_inner = a[0]?a : b;
     end
     
     assign out = out_inner;

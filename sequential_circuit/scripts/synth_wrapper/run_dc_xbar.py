@@ -39,8 +39,8 @@ alter("./file_list.tcl", "analyze", "analyze -format sverilog {" + file_list +  
 
 # c) set all sweeped parameter. 
 # only modify parameters in need of change without list all parameters 
-parameter_value = [4,]#8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]]
-# parameter_value = [[4]]
+parameter_value = [4,8, 16, 32, 64, 128, 256, 512]#, 1024, 2048, 4096]
+
 parameter_name = ["num_in_ports", "num_out_ports"]
 
 # d) create report directory.

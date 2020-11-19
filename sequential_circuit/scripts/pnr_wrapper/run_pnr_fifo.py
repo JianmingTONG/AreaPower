@@ -39,7 +39,7 @@ alter("./file_list.tcl", "analyze", "analyze -format sverilog {" + file_list +  
 
 # c) set all sweeped parameter. 
 # only modify parameters in need of change without list all parameters 
-parameter_value = [[ 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]]
+parameter_value = [ 4,8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
 # parameter_value = [[ 8]]
 
 parameter_name = ["depth"]
@@ -48,23 +48,21 @@ parameter_name = ["depth"]
 os.system("mkdir ./report")
 os.system("mkdir ./pnr_report")
 # sweep params
-for i in range(len(parameter_value[0])):
+for i in range(len(parameter_value)):
   # a) change the parameter
-  param_list = ""
-  for j in range(len(parameter_name)):
-    param_list = param_list + parameter_name[j] + '=' + str(parameter_value[j][i]) + " "
+  param_list = parameter_name[0] + '=' + str(parameter_value[i]) + " "
   print('elaborate -parameter "' + param_list + '" ' + top_module[0])
-  # alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + param_list + '" ' + top_module[0] +"\n")
-  alter("./src/fifo/c_fifo.v","parameter depth", '   parameter depth = ' + str(parameter_value[0][i])  +";\n")
+  alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + param_list + '" ' + top_module[0] +"\n")
   
   # b) start synthesis
   os.system("make synth")
 
   # c) move report to the report directory
-  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[0][i]))
-  
+  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[i]))
+
   # d) start pnr
   os.system("make pnr")
 
   # e) move report of pnr into /pnr_report
   os.system("mv ./PNR/rpt " + "./pnr_report/" + top_module[0] + str(parameter_value[i]))
+

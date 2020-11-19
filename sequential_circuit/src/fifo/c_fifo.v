@@ -37,7 +37,7 @@ module c_fifo
 `include "c_constants.v"
 
    // number of entries in FIFO
-   parameter depth = 4096;
+   parameter depth = 4;
    
    // width of each entry
    parameter width = 8;

@@ -39,8 +39,7 @@ alter("./file_list.tcl", "analyze", "analyze -format sverilog {" + file_list +  
 
 # c) set all sweeped parameter. 
 # only modify parameters in need of change without list all parameters 
-parameter_value = [4, 8, 16, 32, 64, 128, 256, 512]]#, 1024, 2048, 4096]]
-# parameter_value = [[4]]
+parameter_value = [[4, 8, 16, 32, 64, 128, 256, 512], [4, 8, 16, 32, 64, 128, 256, 512]]
 parameter_name = ["num_in_ports", "num_out_ports"]
 
 # d) create report directory.
@@ -48,27 +47,27 @@ os.system("mkdir ./report")
 os.system("mkdir ./pnr_report")
 
 # sweep params
-for i in range(len(parameter_value)):
+for i in range(len(parameter_value[0])):
   # a) change the parameter
   param_list = ""
   if(len(parameter_name) > 1):
     for j in range(len(parameter_name)):
-      param_list = param_list + parameter_name[j] + '=' + str(parameter_value[i]) + " "
+      param_list = param_list + parameter_name[j] + '=' + str(parameter_value[j][i]) + " "
       if j < len(parameter_name)-1:
         param_list = param_list + ","
     print('elaborate -parameter "' + param_list + '" ' + top_module[0])
     alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + param_list + '" ' + top_module[0] +"\n")
   else:
-    alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + parameter_name[0] + "=" + str(parameter_value[i]) + '" ' + top_module[0] +"\n")
+    alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + parameter_name[0] + "=" + str(parameter_value[0][i]) + '" ' + top_module[0] +"\n")
   
   # b) start synthesis
   os.system("make synth")
 
   # c) move report to the report directory
-  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[i]))
+  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[0][i]))
 
   # d) start pnr
   os.system("make pnr")
 
   # e) move report of pnr into /pnr_report
-  os.system("mv ./PNR/rpt " + "./pnr_report/" + top_module[0] + str(parameter_value[i]))
+  os.system("mv ./PNR/rpt " + "./pnr_report/" + top_module[0] + str(parameter_value[0][i]))
