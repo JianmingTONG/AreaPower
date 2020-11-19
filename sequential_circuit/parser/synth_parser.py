@@ -2,7 +2,7 @@
 import os
 
 # funcs = ["adder_tree", "bus", "c_fifo"]
-funcs = ["single_multiplexer"]
+funcs = ["c_fifo", "tree", "bus","xbar","bus_singlebroadcast","linear_dist"]
 
 test_widths = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
 for i in range(len(test_widths)):
@@ -16,10 +16,16 @@ with open("Activation_Function_report.rpt", "w") as f:
   for func in funcs:
     if func == "c_fifo":
         test_widths = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
-    if func == 'adder_tree':
+    if func == 'tree':
         test_widths = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
     if func == 'bus':
-        test_widths = [4, 8, 16, 32, 64, 128, 256]# 512, 1024, 2048, 4096]
+        test_widths = [4, 8, 16, 32, 64, 128, 256, 512]
+    if func == 'xbar':
+        test_widths = [4, 8, 16, 32, 64, 128, 256, 512]
+    if func == 'bus_singlebroadcast':
+        test_widths = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+    if func == 'linear_dist':
+        test_widths = [4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
     for i in range(len(test_widths)):
       root_directory = "./report/" + func + str(test_widths[i]) 
 
