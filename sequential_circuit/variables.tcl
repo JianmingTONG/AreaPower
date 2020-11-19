@@ -30,7 +30,7 @@ set Clock_Name "clk"
 
 
 # 4. Set project name
-set project "bus_singlebroadcast"
+set project "c_crossbar"
     # Option 1 - regular compile - "regular"
 	# Option 2 - ultra compile - "ultra"
 	# Option 3 - ultra compile no autoungroup - "ultra_no_ungroup"

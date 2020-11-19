@@ -9,7 +9,7 @@ source ../variables.tcl
 
 set syn_path "../SYNTH"
 set pnr_path "../PNR"
-
+set pnr_rpt_path "./rpt"
 # Reading Verilog / LEF / Library Files
 set init_verilog		$syn_path/$project-synthesized.v
 set init_lef_file		[list	\
@@ -142,7 +142,7 @@ setExtractRCMode	-effortLevel	low		\
 optDesign		-postRoute	-hold
 
 # Ouput PNR files
-saveDesign		-rc	$pnr_path/data/dbs/$project-pnr.enc
+saveDesign		-rc	    $pnr_path/data/dbs/$project-pnr.enc
 extractRC
 rcOut			-spef	$pnr_path/data/dbs/$project-pnr.enc.dat/$project-pnr.spef.gz
 set lefDefOutVersion	5.7
@@ -158,6 +158,7 @@ timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix bfp1
 saveNetlist $project-pnr.v
 
 report_power -outfile ./power.rpt
+report_power -outfile  > $pnr_rpt_path/power.rpt
 
 write_sdf $project-pnr.sdf
 write_sdc $project-pnr.sdc
