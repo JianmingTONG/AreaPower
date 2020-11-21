@@ -35,8 +35,8 @@ parameter_value = [4, 8]
 parameter_name = ["NUM"]
 
 # d) create report directory.
-os.system("mkdir ./report") 
-os.system("mkdir ./pnr_report")
+# os.system("mkdir ./report") 
+# os.system("mkdir ./pnr_report")
 
 # sweep params
 for i in range(len(parameter_value)):
@@ -52,7 +52,7 @@ for i in range(len(parameter_value)):
   os.system("make pnr")
 
   # c) move report to the report directory
-  os.system("mv ./SYNTH " + "./report/" + top_module[0] + str(parameter_value[i]))
+  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[i]))
 
 
   # e) move report of pnr into /pnr_report

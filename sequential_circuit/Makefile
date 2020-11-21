@@ -70,11 +70,22 @@ clean:
 	rm -rf encounter*
 	rm -rf pnr_report
 	rm -rf report
+	rm -rf synth_report.tar
+	rm -rf pnr_report.tar 
 
-synth_sweep_all: clean synth_sweep_tree synth_sweep_fifo synth_sweep_xbar synth_sweep_linear synth_sweep_bus_singlebroadcast
+synth_sweep_all: clean
+	mkdir ./report
+	make synth_sweep_flow
+
+synth_sweep_flow: clean synth_sweep_tree synth_sweep_fifo synth_sweep_xbar synth_sweep_linear synth_sweep_bus_singlebroadcast
 	tar -cvf synth_report.tar ./report
 
-pnr_sweep_all: clean pnr_sweep_tree pnr_sweep_fifo pnr_sweep_xbar pnr_sweep_linear pnr_sweep_bus_singlebroadcast
+synth_sweep_all: clean
+	mkdir ./report
+	mkdir ./pnr_report
+	make flow_sweep_flow
+
+pnr_sweep_flow: clean pnr_sweep_tree pnr_sweep_fifo pnr_sweep_xbar pnr_sweep_linear pnr_sweep_bus_singlebroadcast
 	tar -cvf pnr_report.tar ./pnr_report
 
 

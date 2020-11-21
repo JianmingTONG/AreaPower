@@ -46,8 +46,8 @@ parameter_value = [[ 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]]
 parameter_name = ["NUM_PES"]
 
 # d) create report directory.
-os.system("mkdir ./report")
-os.system("mkdir ./pnr_report")
+# os.system("mkdir ./report")
+# os.system("mkdir ./pnr_report")
 
 # sweep params
 for i in range(len(parameter_value[0])):
@@ -58,15 +58,16 @@ for i in range(len(parameter_value[0])):
   print('elaborate -parameter "' + param_list + '" ' + top_module[0])
   alter("./file_list.tcl","elaborate", 'elaborate -parameter "' + param_list + '" ' + top_module[0] +"\n")
   #alter("./src/fifo/c_fifo.v","parameter depth", '   parameter depth = ' + str(parameter_value[0][i])  +";\n")
-  
+
   # b) start synthesis
   os.system("make synth")
 
-  # c) move report to the report directory
-  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[0][i]))
-
-  # d) start pnr
+  # c) start pnr
   os.system("make pnr")
 
+  # d) move report to the report directory
+  os.system("mv ./SYNTH/rpt " + "./report/" + top_module[0] + str(parameter_value[0][i]))
+
   # e) move report of pnr into /pnr_report
-  os.system("mv ./PNR/rpt " + "./pnr_report/" + top_module[0] + str(parameter_value[0][i]))
+  os.system("mv ./PNR " + "./pnr_report/" + top_module[0] + str(parameter_value[0][i]))
+
