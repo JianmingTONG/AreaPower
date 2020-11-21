@@ -6,23 +6,6 @@ all: flow
 
 flow: clean synth pnr
 
-synth_sweep_all:
-    clean
-	synth_sweep_tree
-	synth_sweep_fifo
-	synth_sweep_xbar
-	synth_sweep_linear
-	synth_sweep_bus_singlebroadcast
-	tar -cvf synth_report.tar ./report
-
-pnr_sweep_all:
-    clean
-	pnr_sweep_tree
-	pnr_sweep_fifo
-	pnr_sweep_xbar
-	pnr_sweep_linear
-	pnr_sweep_bus_singlebroadcast
-	tar -cvf pnr_report.tar ./pnr_report
 
 synth_sweep_tree:
 	python3 ./scripts/synth_wrapper/run_dc_tree.py
@@ -88,3 +71,8 @@ clean:
 	rm -rf pnr_report
 	rm -rf report
 
+synth_sweep_all: clean synth_sweep_tree synth_sweep_fifo synth_sweep_xbar synth_sweep_linear synth_sweep_bus_singlebroadcast
+	tar -cvf synth_report.tar ./report
+
+pnr_sweep_all: clean pnr_sweep_tree pnr_sweep_fifo pnr_sweep_xbar pnr_sweep_linear pnr_sweep_bus_singlebroadcast
+	tar -cvf pnr_report.tar ./pnr_report
