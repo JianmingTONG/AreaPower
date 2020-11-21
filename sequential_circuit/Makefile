@@ -27,7 +27,7 @@ py_sweep_multiplexer:
 py_sweep_bus_singlebroadcast:
 	python3 ./scripts/synth_wrapper/run_dc_bus_singlebroadcast.py
 
-pnr_sweep_tree:
+pnr_sweep_tree: clean
 	python3 ./scripts/pnr_wrapper/run_pnr_tree.py
 
 pnr_sweep_fifo:
@@ -67,4 +67,6 @@ clean:
 	rm -rf rpt/
 	rm -rf simv.daidir/
 	rm -rf encounter*
+	rm -rf pnr_report
+	rm -rf report
 

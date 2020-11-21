@@ -8,5 +8,5 @@
 
 
 # For systemverilog files (pass parameters)
-analyze -format sverilog { ../src/linear_dist.v }
-elaborate -parameter "NUM_PES=4096 " linear_dist
+analyze -format sverilog {../src/tree.v}
+elaborate -parameter "NUM= 8" tree
