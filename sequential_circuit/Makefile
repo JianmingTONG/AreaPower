@@ -76,3 +76,5 @@ synth_sweep_all: clean synth_sweep_tree synth_sweep_fifo synth_sweep_xbar synth_
 
 pnr_sweep_all: clean pnr_sweep_tree pnr_sweep_fifo pnr_sweep_xbar pnr_sweep_linear pnr_sweep_bus_singlebroadcast
 	tar -cvf pnr_report.tar ./pnr_report
+
+
