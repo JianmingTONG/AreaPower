@@ -6,28 +6,46 @@ all: flow
 
 flow: clean synth pnr
 
-py_sweep_tree:
+synth_sweep_all:
+    clean
+	synth_sweep_tree
+	synth_sweep_fifo
+	synth_sweep_xbar
+	synth_sweep_linear
+	synth_sweep_bus_singlebroadcast
+	tar -cvf synth_report.tar ./report
+
+pnr_sweep_all:
+    clean
+	pnr_sweep_tree
+	pnr_sweep_fifo
+	pnr_sweep_xbar
+	pnr_sweep_linear
+	pnr_sweep_bus_singlebroadcast
+	tar -cvf pnr_report.tar ./pnr_report
+
+synth_sweep_tree:
 	python3 ./scripts/synth_wrapper/run_dc_tree.py
 
-py_sweep_fifo:
+synth_sweep_fifo:
 	python3 ./scripts/synth_wrapper/run_dc_fifo.py
 
-py_sweep_bus:
+synth_sweep_bus:
 	python3 ./scripts/synth_wrapper/run_dc_bus.py
 
-py_sweep_xbar:
+synth_sweep_xbar:
 	python3 ./scripts/synth_wrapper/run_dc_xbar.py
 
-py_sweep_linear:
+synth_sweep_linear:
 	python3 ./scripts/synth_wrapper/run_dc_linear.py
 
-py_sweep_multiplexer:
+synth_sweep_multiplexer:
 	python3 ./scripts/synth_wrapper/run_dc_multiplexer.py
 
-py_sweep_bus_singlebroadcast:
+synth_sweep_bus_singlebroadcast:
 	python3 ./scripts/synth_wrapper/run_dc_bus_singlebroadcast.py
 
-pnr_sweep_tree: clean
+pnr_sweep_tree: 
 	python3 ./scripts/pnr_wrapper/run_pnr_tree.py
 
 pnr_sweep_fifo:
