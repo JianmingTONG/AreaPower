@@ -80,10 +80,10 @@ synth_sweep_all: clean
 synth_sweep_flow: clean synth_sweep_tree synth_sweep_fifo synth_sweep_xbar synth_sweep_linear synth_sweep_bus_singlebroadcast
 	tar -cvf synth_report.tar ./report
 
-synth_sweep_all: clean
+pnr_sweep_all: clean
 	mkdir ./report
 	mkdir ./pnr_report
-	make flow_sweep_flow
+	make pnr_sweep_flow
 
 pnr_sweep_flow: clean pnr_sweep_tree pnr_sweep_fifo pnr_sweep_xbar pnr_sweep_linear pnr_sweep_bus_singlebroadcast
 	tar -cvf pnr_report.tar ./pnr_report
